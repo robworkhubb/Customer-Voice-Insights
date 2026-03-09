@@ -6,8 +6,8 @@ st.set_page_config(page_title="Customer Voice Insights", page_icon="📊")
 
 st.title("🚀 Customer Voice Insights Engine")
 st.markdown("""
-Analizza il sentiment delle recensioni dei tuoi clienti in tempo reale. 
-Questo strumento identifica se una recensione è un segnale di **Fedeltà** o un rischio di **Abbandono (Churn)**.
+Analyze the sentiment of your customer reviews in real time.
+This tool identifies whether a review is a signal of **Loyalty** or a risk of **Churn**.
 """)
 
 # Caricamento modello
@@ -18,7 +18,7 @@ def load_model():
 pipeline = load_model()
 
 # Area di input
-review_text = st.text_area("Incolla qui la recensione del cliente:", 
+review_text = st.text_area("Paste customer review here:", 
                            placeholder="Esempio: The product arrived late and the quality is poor...")
 
 if st.button("Analizza Sentiment"):
@@ -30,15 +30,15 @@ if st.button("Analizza Sentiment"):
         # Visualizzazione Risultati
         st.divider()
         if prediction == 1:
-            st.success(f"### Sentiment: POSITIVO ✅")
+            st.success(f"### Sentiment: POSITIVE ✅")
             st.balloons()
         else:
-            st.error(f"### Sentiment: NEGATIVO 🚩")
+            st.error(f"### Sentiment: NEGATIVE 🚩")
             
         st.write(f"**Confidence Score:** {score:.2f}")
-        st.info("Un punteggio positivo indica soddisfazione, uno negativo indica rischio di abbandono.")
+        st.info("A positive score indicates satisfaction, a negative one indicates risk of abandonment.")
     else:
-        st.warning("Per favore, inserisci del testo per l'analisi.")
+        st.warning("Please enter some text for analysis.")
 
 # Sidebar con info tecniche
 st.sidebar.title("Model Info")
