@@ -33,6 +33,7 @@ Dall'analisi dei coefficienti del modello sono emersi i seguenti driver:
 │   ├── data.py         # Script di preprocessing e labeling
 │   ├── model.py        # Training pipeline e valutazione
 │   ├── analytics.py    # Estrazione degli insights aziendali
+|   ├── evaluation.py   # Valutazione e metriche
 │   └── predict.py      # Script di inferenza per nuove recensioni
 ├── app.py
 ├── requirements.txt    # Dipendenze del progetto
