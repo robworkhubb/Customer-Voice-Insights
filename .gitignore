@@ -1,0 +1,17 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# --- Dati ---
+# Non carichiamo il CSV di Amazon perché è troppo pesante per GitHub
+data/
+*.csv
+
+# --- IDE e Sistema ---
+.vscode/
+.idea/
+.DS_Store
