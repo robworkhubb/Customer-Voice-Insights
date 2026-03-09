@@ -21,7 +21,7 @@ pipeline = load_model()
 review_text = st.text_area("Paste customer review here:", 
                            placeholder="Esempio: The product arrived late and the quality is poor...")
 
-if st.button("Analizza Sentiment"):
+if st.button("Analyze Sentiment"):
     if review_text.strip():
         # Predizione
         prediction = pipeline.predict([review_text])[0]
